@@ -1,0 +1,35 @@
+<div class="container">
+
+<form #f="ngForm" (ngSubmit)="add()">
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">firstname</label>
+      <input type="text" class="form-control"  placeholder="firstname" required name="firstname" #firstname="ngModel" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">lastname</label>
+        <input type="text" class="form-control"  placeholder="lastname"required name="lastname" #lastname="ngModel" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">email</label>
+        <input type="email" class="form-control"  placeholder="email"required name="email" #email="ngModel" ngModel>
+      </div>  
+      <div class="form-group">
+        <label for="exampleFormControlInput1">password</label>
+        <input type="password" class="form-control"  placeholder="password"required name="password" #password="ngModel" ngModel>
+      </div> 
+      <div class="form-group">
+        <label for="exampleFormControlInput1">age</label>
+        <input type="number" class="form-control"  placeholder="age"required name="age" #age="ngModel" ngModel>
+      </div>  
+      <div class="form-group">
+        <label for="exampleFormControlInput1">phonenumber</label>
+        <input type="text" class="form-control"  placeholder="phonenumber"required name="phonenumber" #phonenumber="ngModel" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">solde</label>
+        <input type="nymber" class="form-control"  placeholder="solde"required name="solde" #solde="ngModel" ngModel>
+      </div>
+    <button class="btn btn-primary" [disabled]="f.invalid">Add user</button>
+  </form>
+</div> 
