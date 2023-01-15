@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+
 
 @Component({
   selector: 'app-auth-admin-layout',
@@ -12,7 +13,8 @@ export class AuthAdminLayoutComponent {
   
   }
   login(usercre:{email:string,password:string}){
-    this.http.post("127.0.0.1:4000/admin",usercre).subscribe ((res)=>console.log(res))
+   
+    this.http.post("http://127.0.0.1:4000/admin/login",usercre).subscribe ((res)=>console.log(res))
   }
 
 }
