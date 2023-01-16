@@ -34,7 +34,7 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                       <!---
+                       
                         <tr *ngFor="let item of dataArray">
                             <td>{{item.firstname}}</td>
                             <td>{{item.lastname}}</td>
@@ -42,8 +42,8 @@
                             <td>{{item.age}}</td>
                             <td>{{item.phonenumber}}</td>
                             <td>{{item.solde}}</td>
-                            <td><button class="btn btn-danger">Delete</button></td>
-                        </tr> --> 
+                            <td><button class="btn btn-danger" (click)="clk(item.email)">Delete</button></td>
+                        </tr> 
                         
                         
                        

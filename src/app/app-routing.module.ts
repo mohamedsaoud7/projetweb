@@ -10,10 +10,11 @@ const routes: Routes = [
     {path:'loginuser',loadChildren:()=>import('./views/front/loginuser/loginuser.module').then(m=>m.LoginuserModule)},
     {path:'register',loadChildren:()=>import('./views/front/register/register.module').then(m=>m.RegisterModule)},
     {path:'ajout',loadChildren:()=>import('./views/front/ajout/ajout.module').then(m=>m.AjoutModule)},
-    {path:'transfert',loadChildren:()=>import('./views/front/transfert/transfert.module').then(m=>m.TransfertModule)},
-    {path:'retrait',loadChildren:()=>import('./views/front/retrait/retrait.module').then(m=>m.RetraitModule)},
     {path:'consult',loadChildren:()=>import('./views/front/consult/consult.module').then(m=>m.ConsultModule)},
-    
+    {path:'retrait',loadChildren:()=>import('./views/front/retrait/retrait.module').then(m=>m.RetraitModule)},
+    {path:'transfert',loadChildren:()=>import('./views/front/transfert/transfert.module').then(m=>m.TransfertModule)},
+  
+
   ]},
   {path:'admin',component:AdminLayoutComponent,children:[
     {path:'',loadChildren:()=>import('./views/admin/dashboard/dashboard.module').then(m=>m.DashboardModule)},

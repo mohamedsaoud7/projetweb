@@ -9,8 +9,12 @@ import { DataService } from 'src/app/views/services/data.service';
 })
 export class ClientsComponent {
   dataArray:any
-  constructor(private ds:DataService){
+  constructor(private ds:DataService,private http:HttpClient){
     this.ds.getAllusers().subscribe(data=>this.dataArray=data)
+  }
+  clk(email:string){
+    this.http.delete("http://127.0.0.1:4000/na7iuser/"+ email).subscribe((res)=>console.log(res))
+    console.log(email)
   }
 
 }
